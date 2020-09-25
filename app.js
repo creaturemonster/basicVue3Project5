@@ -24,6 +24,13 @@ const app = Vue.createApp({
       this.fullName=value + ' ' + this.lastName;
       }
     }, 
+    counter(value){
+      if(value > 50){
+        setTimeout(function(){
+          this.counter=0;
+        }, 2000);
+      }
+    },
     lastName(value){
       if(value == ''){
         this.fullName='';
