@@ -20,6 +20,9 @@ const app = Vue.createApp({
       this.name='';
     }, 
     outputFullName(){
+      if(this.name === ' '){
+        return ' ';
+      }
       return this.name + ' ' + 'Schwarzmuller' ;
     }
   }
