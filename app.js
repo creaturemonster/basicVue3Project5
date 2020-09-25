@@ -14,6 +14,15 @@ const app = Vue.createApp({
         return this.name + '' +'Schwarzmuller';
       },
   },
+  watch:{
+    name(value){
+      if(value == ''){
+        this.fullName='';
+      }else{
+      this.fullName=value + ' ' + 'Schwarzmuller';
+      }
+    }
+  },
   methods: {
     setName(event, lastName) {
       this.name = event.target.value + ' ' + lastName;
