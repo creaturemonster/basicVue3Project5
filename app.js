@@ -18,6 +18,9 @@ const app = Vue.createApp({
     }, 
     resetInput(){
       this.name='';
+    }, 
+    outputFullName(){
+      return this.name + ' ' + 'Schwarzmuller' ;
     }
   }
 });
